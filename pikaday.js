@@ -1133,6 +1133,8 @@
                 removeClass(this.el, 'is-hidden');
                 this._v = true;
                 this.draw();
+                this.el.style.position = ''; //clear position change from hide()
+                
                 if (this._o.bound) {
                     addEvent(document, 'click', this._onClick);
                     this.adjustPosition();
